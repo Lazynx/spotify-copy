@@ -12,9 +12,10 @@ connectDB()
 
 const app = express()
 const PORT = process.env.PORT || 8000
+const ORIGIN = process.env.ORIGIN || 'http://localhost:3000';
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ORIGIN,
   methods: ['GET', 'POST', 'PUT'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
